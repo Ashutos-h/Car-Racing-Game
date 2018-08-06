@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontMasterOther.master.cs" Inherits="FrontMasterOther" %>
+
+<%@ Register Src="~/_TopBar.ascx" TagPrefix="uc1" TagName="_TopBar" %>
+<%@ Register Src="~/_Logo.ascx" TagPrefix="uc1" TagName="_Logo" %>
+<%@ Register Src="~/_MainMenu.ascx" TagPrefix="uc1" TagName="_MainMenu" %>
+<%@ Register Src="~/_Footer.ascx" TagPrefix="uc1" TagName="_Footer" %>
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head runat="server">
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>zYoung - Free Fitness Html5 Templates</title>
+    <meta name="description" content="Free Responsive Html5 Css3 Templates | Zerotheme.com">
+    <meta name="author" content="https://www.zerotheme.com">
+
+    <!-- Mobile Specific Metas
+	================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+	================================================== -->
+    <link rel="stylesheet" href="css/zerogrid.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/jquery1111.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="home-page">
+    <div class="wrap-body">
+        <header>
+            <uc1:_TopBar runat="server" ID="_TopBar" />
+            <uc1:_Logo runat="server" ID="_Logo" />
+            <uc1:_MainMenu runat="server" ID="_MainMenu" />
+            
+        </header>
+        <form id="form1" runat="server">
+            <!--////////////////////////////////////Container-->
+            <section id="container">
+                <div class="wrap-container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </section>
+        </form>
+
+        <uc1:_Footer runat="server" ID="_Footer" />
+        </div>
+        <!-- carousel -->
+        <script src="owl-carousel/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#owl-slide").owlCarousel({
+                    autoPlay: 3000,
+                    items: 1,
+                    itemsDesktop: [1199, 1],
+                    itemsDesktopSmall: [979, 1],
+                    itemsTablet: [768, 1],
+                    itemsMobile: [479, 1],
+                    navigation: true,
+                    navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+                    pagination: false
+                });
+            });
+        </script>
+    
+</body>
+</html>
